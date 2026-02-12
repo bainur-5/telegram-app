@@ -13,8 +13,8 @@
     border-radius: 18px;
     background: transparent;
     color: rgba(238, 243, 255, 0.82);
-    font-size: 35px / 2;
-    font-weight: 300;
+    font-size: var(--fs-17-5);
+    font-weight: var(--fw-300);
     cursor: pointer;
     transition: 0.2s ease;
 

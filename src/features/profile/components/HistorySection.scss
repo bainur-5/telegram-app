@@ -29,11 +29,11 @@
 }
 
 .ps-history__text {
-  font-size: 12px;
-  font-weight: 300;
+  font-size: var(--fs-12);
+  font-weight: var(--fw-300);
 }
 
 .ps-history__arrow {
-  font-size: 16px;
+  font-size: var(--fs-16);
   opacity: 0.85;
 }

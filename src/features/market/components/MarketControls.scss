@@ -21,8 +21,8 @@
     border: 0;
     background: transparent;
     color: #d6deef;
-    font-size: 10px;
-    font-weight: 300;
+    font-size: var(--fs-10);
+    font-weight: var(--fw-300);
     cursor: pointer;
 
     &.is-active {
@@ -50,8 +50,8 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    font-size: 10px;
-    font-weight: 300;
+    font-size: var(--fs-10);
+    font-weight: var(--fw-300);
   }
 
   &__chevron {
@@ -86,7 +86,7 @@
     border-radius: 8px;
     padding: 0 10px;
     cursor: pointer;
-    font-size: 10px;
+    font-size: var(--fs-10);
 
     &:hover,
     &.is-active {
@@ -107,7 +107,7 @@
     }
 
     &__dropdownBtn {
-      font-size: 14px;
+      font-size: var(--fs-14);
       height: 36px;
     }
   }

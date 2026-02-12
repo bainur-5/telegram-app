@@ -36,8 +36,8 @@
 
   &__title {
     margin: 0;
-    font-size: 12px;
-    font-weight: 300;
+    font-size: var(--fs-12);
+    font-weight: var(--fw-300);
     line-height: 1.2;
     text-align: center;
   }
@@ -58,8 +58,8 @@
     padding-bottom: 10px;
 
     p {
-      font-size: 10px;
-      font-weight: 300;
+      font-size: var(--fs-10);
+      font-weight: var(--fw-300);
       opacity: 0.9;
     }
   }
@@ -85,8 +85,8 @@
     align-items: center;
     gap: 4px;
     p {
-      font-size: 10px;
-      font-weight: 300;
+      font-size: var(--fs-10);
+      font-weight: var(--fw-300);
       line-height: 1.2;
       white-space: nowrap;
     }
@@ -105,8 +105,8 @@
 
   &__value {
     p {
-      font-size: 10px;
-      font-weight: 300;
+      font-size: var(--fs-10);
+      font-weight: var(--fw-300);
       line-height: 1.2;
       color: var(--yellow);
       white-space: nowrap;

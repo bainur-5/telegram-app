@@ -2,7 +2,7 @@
   --rgb-w: 420px;
   --rgb-h: 108px;
   --rgb-radius: 14px;
-  --rgb-font-size: 32px;
+  --rgb-font-size: var(--fs-32);
 
   --rgb-background: #f1dc57;
   --rgb-border: #f2e95d;
@@ -79,7 +79,7 @@
     z-index: 3;
     color: var(--rgb-text);
     font-size: var(--rgb-font-size);
-    font-weight: 300;
+    font-weight: var(--fw-300);
     line-height: 1;
     letter-spacing: 0.02em;
 
