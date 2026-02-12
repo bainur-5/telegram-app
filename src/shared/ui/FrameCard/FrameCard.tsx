@@ -1,4 +1,3 @@
-// src/features/market/components/FrameCard.tsx
 import type { ReactNode } from 'react';
 import './FrameCard.scss';
 
@@ -29,16 +28,14 @@ export default function FrameCard({
         aria-hidden="true"
       >
         <path
-          d="M9.5 0.5 L99.5 0.5 L99.5 94.2 L91.5 99.5 L0.5 99.5 L0.5 6.8 Z"
+          d="M4 0 H100 V92 L97 100 H0 V13 Z"
           fill="none"
           stroke="var(--border)"
           strokeWidth="1"
           strokeLinejoin="miter"
           vectorEffect="non-scaling-stroke"
-          shapeRendering="geometricPrecision"
         />
       </svg>
-
 
       {title !== undefined && (
         <header className="fc-card__header">

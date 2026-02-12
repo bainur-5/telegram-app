@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import tonIcon from '../../../assets/toncoin_ton_logo.svg';
 import './WithdrawPanel.scss';
 import GlassCard from './GlassCard';
-import RetroBigButton from '../../../components/RetroBigButton/RetroBigButton';
+import RetroBigButton from '../../../shared/ui/RetroBigButton/RetroBigButton';
 
 const MIN_WITHDRAW = 0.5;
 const COMMISSION = 5;

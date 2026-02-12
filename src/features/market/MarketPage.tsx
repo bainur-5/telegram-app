@@ -8,7 +8,7 @@ import MarketHeader from './components/MarketHeader';
 import MarketControls from './components/MarketControls';
 import MarketItemCard from './components/MarketItemCard';
 
-import RetroBigButton from '../../components/RetroBigButton/RetroBigButton';
+import RetroBigButton from '../../shared/ui/RetroBigButton/RetroBigButton';
 import './MarketPage.scss';
 import CreateOrderModal from './components/CreateOrderModal';
 

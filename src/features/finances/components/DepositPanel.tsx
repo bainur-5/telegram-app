@@ -2,7 +2,7 @@ import { useState } from 'react';
 import tonIcon from '../../../assets/toncoin_ton_logo.svg';
 import './DepositPanel.scss';
 import GlassCard from './GlassCard';
-import RetroBigButton from '../../../components/RetroBigButton/RetroBigButton';
+import RetroBigButton from '../../../shared/ui/RetroBigButton/RetroBigButton';
 
 const QUICK = [0.5, 1, 2, 5, 10];
 

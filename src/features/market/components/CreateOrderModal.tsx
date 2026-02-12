@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import './CreateOrderModal.scss';
-import RetroBigButton from '../../../components/RetroBigButton/RetroBigButton';
+import RetroBigButton from '../../../shared/ui/RetroBigButton/RetroBigButton';
 
 export type CreateOrderPayload = {
   eggs: number;
