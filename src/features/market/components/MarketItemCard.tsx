@@ -1,9 +1,9 @@
 // src/features/market/components/MarketItemCard.tsx
 import type { MarketItem } from '../types';
-import FrameCard from '../../../shared/ui/FrameCard/FrameCard';
 import RetroBigButton from '../../../shared/ui/RetroBigButton/RetroBigButton';
 import tonIcon from '../../../assets/toncoin_ton_logo.svg';
 import './MarketItemCard.scss';
+import FrameCardMarket from '../../../shared/ui/FrameCardMarket/FrameCardMarket';
 
 interface MarketItemCardProps {
   item: MarketItem;
@@ -12,7 +12,7 @@ interface MarketItemCardProps {
 
 export default function MarketItemCard({ item, onBuy }: MarketItemCardProps) {
   return (
-    <FrameCard className="market-item">
+    <FrameCardMarket className="market-item">
 
       <div className="market-item__line">
         <span className="market-item__lineLabel">{item.title}</span>
@@ -53,6 +53,6 @@ export default function MarketItemCard({ item, onBuy }: MarketItemCardProps) {
       >
         Купить
       </RetroBigButton>
-    </FrameCard>
+    </FrameCardMarket>
   );
 }

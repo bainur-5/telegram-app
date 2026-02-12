@@ -55,11 +55,9 @@ body {
 .app {
   width: 100%;
   min-height: 100dvh;
-  max-width: 480px;
   margin: 0 auto;
-  padding: calc(12px + env(safe-area-inset-top)) 10px calc(80px + env(safe-area-inset-bottom));
+  padding: 12px 12px;
   overflow-x: hidden;
-  border: 1px solid red;
   position: relative;
 }
 

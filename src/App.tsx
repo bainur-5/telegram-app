@@ -26,7 +26,7 @@ function renderScreen(screen: Screen) {
 }
 
 export default function App() {
-  const [activeScreen, setActiveScreen] = useState<Screen>('profile');
+  const [activeScreen, setActiveScreen] = useState<Screen>('market');
 
   return (
     <div className="app">

@@ -4,7 +4,7 @@
   --dot-gap: 18px;
   --dot-opacity: 0.25;
 
-  position: absolute;
+  position: fixed;
   width: var(--size);
   height: var(--size);
   pointer-events: none;

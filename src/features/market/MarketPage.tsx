@@ -15,7 +15,7 @@ import CreateOrderModal from './components/CreateOrderModal';
 export default function MarketPage() {
   const [tab, setTab] = useState<MarketTab>('all');
   const [sortKey, setSortKey] = useState<SortKey>('priceAsc');
-  const [isCreateOpen, setCreateOpen] = useState<boolean>(true);
+  const [isCreateOpen, setCreateOpen] = useState<boolean>(false);
 
   const visibleItems = useMemo(() => {
     const base = tab === 'all' ? MOCK_ITEMS : MOCK_ITEMS.slice(0, 3);
