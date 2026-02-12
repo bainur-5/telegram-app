@@ -1,4 +1,4 @@
-import UniversalInfoCard, { type CardRow } from "../../ui/UniversalInfoCard/UniversalInfoCard";
+import UniversalInfoCard, { type CardRow } from "../../../shared/ui/UniversalInfoCard/UniversalInfoCard";
 
 export default function LastCard() {
   const lastBlocks: CardRow[] = [

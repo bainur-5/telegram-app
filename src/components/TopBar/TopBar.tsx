@@ -1,4 +1,4 @@
-import CutCornerButton from "../../ui/CutCornerButton";
+import CutCornerButton from "../../shared/ui/CutCornerButton";
 import user from "../../assets/user.svg";
 import ton from "../../assets/token-branded_ton.svg";
 

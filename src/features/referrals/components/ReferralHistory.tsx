@@ -1,13 +1,14 @@
-import ton from '../../assets/toncoin_ton_logo.svg';
+import ton from '../../../assets/toncoin_ton_logo.svg';
+import './ReferralHistory.scss';
 
 type ReferralItem = {
   id: string | number;
   name: string;
   score: number;
-  delta?: number; // например +2
+  delta?: number;
 };
 
-interface ReferalHistoryProps {
+interface ReferralHistoryProps {
   title?: string;
   items?: ReferralItem[];
 }
@@ -18,10 +19,10 @@ const mockItems: ReferralItem[] = [
   { id: 3, name: 'Nickname', score: 640 },
 ];
 
-export default function ReferalHistory({
+export default function ReferralHistory({
   title = 'История рефералов',
   items = mockItems,
-}: ReferalHistoryProps) {
+}: ReferralHistoryProps) {
   return (
     <div className="referalHistory">
       <p className="referalHistory__title">{title}</p>
@@ -33,9 +34,7 @@ export default function ReferalHistory({
               <div className="referalHistory__avatar" />
 
               <div
-                className={`referalHistory__info ${
-                  item.delta ? 'referalHistory__info--active' : ''
-                }`} 
+                className={`referalHistory__info ${item.delta ? 'referalHistory__info--active' : ''}`}
               >
                 <div className="referalHistory__info_left">
                   <p className="referalHistory__name">{item.name}</p>
@@ -46,7 +45,7 @@ export default function ReferalHistory({
                   </div>
                 </div>
 
-                {item.delta ? <p className='referalHistory__delta'>+{item.delta}</p> : null}
+                {item.delta ? <p className="referalHistory__delta">+{item.delta}</p> : null}
               </div>
             </div>
           ))}

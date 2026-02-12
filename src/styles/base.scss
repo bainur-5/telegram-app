@@ -1,23 +1,26 @@
 @use "../components/TopBar/top-bar.scss";
-@use "../ui/UniversalInfoCard/UniversalInfoCard.scss";
-@use "../ui/FriendsCard/FriendsCard.scss";
-@use "../ui/CardText/CardText.scss";
-@use "../ui/CutCornerButton/CutCornerButton.scss";
-@use "../components/RetroBigButton/RetroBigButton.scss";
 @use "../components/DotsBlock/DotsBlock.scss";
-@use "../components/ReferralHistory/ReferralHistory.scss";
 @use "../components/Navigation/Navigation.scss";
+@use "../shared/ui/UniversalInfoCard/UniversalInfoCard.scss";
+@use "../shared/ui/CutCornerButton/CutCornerButton.scss";
+@use "../shared/ui/RetroBigButton/RetroBigButton.scss";
+@use "../features/referrals/components/FriendsCard.scss";
+@use "../features/referrals/components/CardText.scss";
+@use "../features/referrals/components/ReferralHistory.scss";
+@use "../features/mining/MiningPage.scss";
+@use "../features/referrals/ReferralsPage.scss";
 @use "../features/finances/FinancesPage.scss";
 @use "../features/market/MarketPage.scss";
+@use "../features/profile/ProfileSettingsPage.scss";
 @use "./utilities.scss";
 @use "./fonts.scss";
-/* base.scss */
+
 :root {
   --bg: #171531;
   --text: #e5e7eb;
   --card: #111827;
   --border: #7162be;
-  --violet: #a542f9;  
+  --violet: #a542f9;
   --yellow: #f0f95d;
   --green: #7ebf3e;
   --green-light: #b6fd7d;
@@ -26,8 +29,7 @@
   --card-title: #393b71;
   --card-back: #1d1f45;
   --radius: 14px;
-  --font-main:
-    "Nunito", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-main: "Nunito", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 * {
@@ -35,12 +37,14 @@
   margin: 0;
   padding: 0;
 }
+
 html,
 body,
 #root {
   height: 100%;
   width: 100%;
 }
+
 body {
   margin: 0;
   font-family: var(--font-main);
@@ -50,12 +54,10 @@ body {
 
 .app {
   width: 100%;
-  margin: 0 auto;
   min-height: 100dvh;
   max-width: 480px;
   margin: 0 auto;
-  padding: calc(12px + env(safe-area-inset-top)) 10px
-    calc(80px + env(safe-area-inset-bottom));
+  padding: calc(12px + env(safe-area-inset-top)) 10px calc(80px + env(safe-area-inset-bottom));
   overflow-x: hidden;
   border: 1px solid red;
   position: relative;
@@ -72,20 +74,6 @@ body {
   clip-path: polygon(18% 0, 100% 0, 100% 92%, 93% 100%, 0 100%, 0 15%);
 }
 
-.marketCards {
-  margin-top: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.bigButtonBlocks {
-  margin: 24px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-}
-p{
+p {
   font-weight: 300;
 }

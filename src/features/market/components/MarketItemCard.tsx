@@ -1,7 +1,7 @@
 // src/features/market/components/MarketItemCard.tsx
 import type { MarketItem } from '../types';
-import FrameCard from './FrameCard';
-import RetroBigButton from '../../../components/RetroBigButton/RetroBigButton';
+import FrameCard from '../../../shared/ui/FrameCard/FrameCard';
+import RetroBigButton from '../../../shared/ui/RetroBigButton/RetroBigButton';
 import tonIcon from '../../../assets/toncoin_ton_logo.svg';
 import './MarketItemCard.scss';
 
