@@ -20,8 +20,8 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-size: 12px;
-    font-weight: 300;
+    font-size: var(--fs-12);
+    font-weight: var(--fw-300);
     color: #f8faff;
     background-color: var(--card-title);
     padding-inline: 14px;
@@ -35,10 +35,10 @@
 
   &__sectionTitle {
     margin: 0;
-    font-size: 12px;
+    font-size: var(--fs-12);
     line-height: 1.2;
     color: #fff;
-    font-weight: 300;
+    font-weight: var(--fw-300);
     padding-inline: 14px;
     padding: 14px;
     background-color: var(--card-title);
@@ -50,8 +50,8 @@
     border: 1px solid rgba(252, 223, 247, 0.45);
     background: rgba(255, 255, 255, 0.08);
     color: #fff;
-    font-size: 12px;
-    font-weight: 300;
+    font-size: var(--fs-12);
+    font-weight: var(--fw-300);
     padding: 0 8px;
     outline: none;
     margin-inline: 14px;
@@ -62,8 +62,8 @@
 
     &--small {
       height: 32px;
-      font-size: 12px;
-      font-weight: 300;
+      font-size: var(--fs-12);
+      font-weight: var(--fw-300);
     }
   }
 
@@ -80,8 +80,8 @@
     border: 1px solid rgba(252, 223, 247, 0.38);
     background: rgba(255, 255, 255, 0.06);
     color: #fff;
-    font-size: 10px;
-    font-weight: 300;
+    font-size: var(--fs-10);
+    font-weight: var(--fw-300);
     cursor: pointer;
   }
 
@@ -100,15 +100,15 @@
     justify-content: space-between;
     gap: 10px;
     color: rgba(255, 245, 255, 0.88);
-    font-size: 12px;
+    font-size: var(--fs-12);
     padding: 0 14px;
 
     button {
       border: 0;
       background: transparent;
       color: #fff;
-      font-size: 12px;
-      font-weight: 300;
+      font-size: var(--fs-12);
+      font-weight: var(--fw-300);
       cursor: pointer;
     }
   }
@@ -121,7 +121,7 @@
       ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     padding: 8px 10px;
-    font-size: 12px;
+    font-size: var(--fs-12);
     line-height: 1.35;
     word-break: break-all;
     margin: 0 14px;

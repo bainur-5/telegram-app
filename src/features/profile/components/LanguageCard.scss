@@ -21,8 +21,8 @@
 
 .ps-language__title {
   margin: 0;
-  font-size: 12px;
-  font-weight: 300;
+  font-size: var(--fs-12);
+  font-weight: var(--fw-300);
   color: #f5f8ff;
   white-space: nowrap;
 }
@@ -40,7 +40,7 @@
   border: 1px solid rgba(185, 202, 255, 0.28);
   background: rgba(101, 121, 168, 0.28);
   color: #fff;
-  font-size: 18px;
+  font-size: var(--fs-18);
   display: grid;
   place-items: center;
   cursor: pointer;

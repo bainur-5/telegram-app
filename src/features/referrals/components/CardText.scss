@@ -9,8 +9,8 @@
   border-radius: 6px;
   background-color: var(--card-back);
   .text{
-    font-size: 12px;
-    font-weight: 300;
+    font-size: var(--fs-12);
+    font-weight: var(--fw-300);
     line-height: 1.2;
     text-align: center;
     text-transform: uppercase;

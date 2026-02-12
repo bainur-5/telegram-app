@@ -13,7 +13,7 @@
   }
 
   &__lineLabel {
-    font-size: 10px;
+    font-size: var(--fs-10);
     line-height: 1.2;
     color: rgba(240, 243, 255, 0.7);
     letter-spacing: 0.2px;
@@ -28,9 +28,9 @@
     justify-content: center;
     gap: 6px;
     padding: 0 10px;
-    font-size: 10px; // было 31px / 2
+    font-size: var(--fs-10); // было 31px / 2
     line-height: 1;
-    font-weight: 300;
+    font-weight: var(--fw-300);
     color: #fff;
 
     img {
@@ -50,7 +50,7 @@
 
   &__rate {
     margin-top: 2px;
-    font-size: 12px;
+    font-size: var(--fs-12);
     color: rgba(240, 243, 255, 0.74);
   }
 }

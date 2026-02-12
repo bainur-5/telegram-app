@@ -35,8 +35,8 @@
 
   &__title {
     margin: 0;
-    font-size: 12px;
-    font-weight: 300;
+    font-size: var(--fs-12);
+    font-weight: var(--fw-300);
     line-height: 1.2;
   }
 
@@ -84,8 +84,8 @@
   }
 
   &__label {
-    font-size: 10px;
-    font-weight: 300;
+    font-size: var(--fs-10);
+    font-weight: var(--fw-300);
     line-height: 1.2;
     white-space: nowrap;
     width: 45%;
@@ -93,8 +93,8 @@
 
   &__value {
     color: var(--yellow);
-    font-size: 10px;
-    font-weight: 300;
+    font-size: var(--fs-10);
+    font-weight: var(--fw-300);
     line-height: 1.2;
     white-space: nowrap;
     width: 45%;
@@ -128,7 +128,7 @@
   justify-content: center;
   padding: 2px 8px;
   border-radius: 999px;
-  font-size: 10px;
+  font-size: var(--fs-10);
   line-height: 1.2;
   white-space: nowrap;
   background: var(--violet);

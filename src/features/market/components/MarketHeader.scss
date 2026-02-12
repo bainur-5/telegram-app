@@ -8,9 +8,9 @@
 
   &__title {
     margin: 0;
-    font-size: 16px;
+    font-size: var(--fs-16);
     line-height: 1.1;
-    font-weight: 300;
+    font-weight: var(--fw-300);
     color: #fff;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
   }
@@ -23,7 +23,7 @@
     background: rgba(255, 255, 255, 0.12);
     color: #d9e1ff;
     cursor: pointer;
-    font-size: 18px;
+    font-size: var(--fs-18);
     line-height: 1;
   }
 }

@@ -14,14 +14,14 @@
 
 .ps-notify__title {
   margin: 0;
-  font-size: 12px;
-  font-weight: 300;
+  font-size: var(--fs-12);
+  font-weight: var(--fw-300);
 }
 
 .ps-notify__subtitle {
   margin: 4px 0 10px;
-  font-size: 10px;
-  font-weight: 300;
+  font-size: var(--fs-10);
+  font-weight: var(--fw-300);
 }
 
 .ps-notify__list {
@@ -43,13 +43,13 @@
 
 .ps-notify__name {
   margin: 0;
-  font-size: 14px;
-  font-weight: 300;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-300);
   color: #ffffff;
 }
 
 .ps-notify__desc {
   margin: 3px 0 0;
-  font-size: 12px;
+  font-size: var(--fs-12);
   color: rgba(236, 242, 255, 0.68);
 }
