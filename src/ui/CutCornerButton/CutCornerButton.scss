@@ -1,0 +1,54 @@
+.cut-corner-btn {
+  width: var(--ccb-w);
+  height: var(--ccb-h);
+  border: 0;
+  padding: 0;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  isolation: isolate;
+  clip-path: var(--ccb-clip);
+
+  // внешний слой = обводка
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--ccb-border-color);
+    clip-path: var(--ccb-clip);
+    z-index: 0;
+  }
+
+  // внутренний слой = заливка
+  // top = 0 -> верхняя обводка исчезает
+  &::after {
+    content: "";
+    position: absolute;
+    inset: var(--ccb-inner-inset);
+    background: var(--ccb-fill-color);
+    clip-path: var(--ccb-clip);
+    z-index: 1;
+  }
+
+  &__icon {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    color: white;
+    fill: white;
+
+    > * {
+      width: 56%;
+      height: 56%;
+      display: block;
+    }
+
+    img,
+    svg {
+      object-fit: contain;
+    }
+  }
+}

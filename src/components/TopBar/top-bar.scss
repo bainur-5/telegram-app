@@ -1,0 +1,81 @@
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .topBar__left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    .topBar__score_block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 16px;
+      min-width: 56px;
+      padding: 3px 9px 3px 0;
+      border: 1px solid var(--border);
+      border-radius: 150px;
+      border-left: none;
+      position: relative;
+      .topBar__score_icon {
+        width: 24px;
+        height: 20px;
+        background-color: var(--violet);
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+          width: 16px;
+
+        }
+      }
+      .topBar__score {
+        margin-left: auto;
+        height: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--yellow);
+        margin-left: 5px;
+        span {
+          font-size: 10px;
+          font-weight: 300;
+        }
+      }
+    }
+    .topBar_add {
+      height: 16px;
+      width: 21px;
+      max-width: 21px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--green);
+      border: transparent;
+      border-radius: 100px;
+      box-shadow:
+        inset 0 0px 0 rgba(255, 255, 255, 0.35),
+        inset 0 -2px 0 var(--green-light),
+        inset 0 -8px 12px rgba(0, 0, 0, 0.08),
+        0 6px 14px rgba(0, 0, 0, 0.25);
+      color: white;
+      cursor: pointer;
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        height: 12px;
+      }
+    }
+  }
+  .topBar__right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* светлая полоса снизу (как на макете) */
+  }
+}

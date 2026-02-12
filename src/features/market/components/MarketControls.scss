@@ -1,0 +1,114 @@
+/* src/features/market/components/MarketControls.scss */
+.market-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 24px;
+
+  &__tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 32%;
+    min-width: 160px;
+    background: rgba(164, 178, 209, 0.35);
+    border-radius: 999px;
+    padding: 3px;
+  }
+
+  &__tab {
+    height: 24px;
+    border-radius: 999px;
+    border: 0;
+    background: transparent;
+    color: #d6deef;
+    font-size: 10px;
+    font-weight: 300;
+    cursor: pointer;
+
+    &.is-active {
+      background: rgba(255, 255, 255, 0.22);
+      color: #fff;
+    }
+  }
+
+  &__dropdown {
+    position: relative;
+    margin-left: auto;
+    width: 210px;
+    max-width: 28%;
+  }
+
+  &__dropdownBtn {
+    width: 100%;
+    height: 28px;
+    border-radius: 12px;
+    border: 1px solid rgba(175, 186, 217, 0.6);
+    background: rgba(102, 116, 150, 0.5);
+    color: #e7eeff;
+    padding: 0 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 300;
+  }
+
+  &__chevron {
+    transition: transform 0.2s ease;
+    &.is-open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__dropdownMenu {
+    position: absolute;
+    z-index: 30;
+    left: 0;
+    right: 0;
+    top: calc(100% + 6px);
+    margin: 0;
+    padding: 6px;
+    list-style: none;
+    border-radius: 12px;
+    border: 1px solid rgba(175, 186, 217, 0.7);
+    background: #2a2f5d;
+    backdrop-filter: blur(4px);
+  }
+
+  &__dropdownItem {
+    width: 100%;
+    text-align: left;
+    height: 34px;
+    border: 0;
+    background: transparent;
+    color: #e8eeff;
+    border-radius: 8px;
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: 10px;
+
+    &:hover,
+    &.is-active {
+      background: rgba(255, 255, 255, 0.12);
+    }
+  }
+
+  @media (max-width: 420px) {
+    gap: 8px;
+
+    &__tabs {
+      min-width: 142px;
+      width: 44%;
+    }
+
+    &__dropdown {
+      width: 170px;
+    }
+
+    &__dropdownBtn {
+      font-size: 14px;
+      height: 36px;
+    }
+  }
+}

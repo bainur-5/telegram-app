@@ -1,0 +1,56 @@
+/* src/features/market/components/MarketItemCard.scss */
+.market-item {
+  .fc-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  &__line {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  &__lineLabel {
+    font-size: 10px;
+    line-height: 1.2;
+    color: rgba(240, 243, 255, 0.7);
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+  }
+
+  &__pill {
+    min-height: 24px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 0 10px;
+    font-size: 10px; // было 31px / 2
+    line-height: 1;
+    font-weight: 300;
+    color: #fff;
+
+    img {
+      width: 14px;
+      height: 14px;
+      display: block;
+    }
+
+    &--blue {
+      background: var(--blue);
+    }
+    
+    &--violet {
+      background: var(--violet);
+    }
+  }
+
+  &__rate {
+    margin-top: 2px;
+    font-size: 12px;
+    color: rgba(240, 243, 255, 0.74);
+  }
+}
