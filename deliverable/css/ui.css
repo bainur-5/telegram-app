@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("../../src/assets/fonts/Nunito-Light.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url("../../src/assets/fonts/Nunito-Black.ttf") format("truetype");
+  font-weight: 800;
+}
+body {
+  font-family: var(--font-main);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.page-shell {
+  width: 100%;
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: 12px;
+  max-width: 480px;
+  position: relative;
+}
+
+/*# sourceMappingURL=ui.css.map */
