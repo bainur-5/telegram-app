@@ -1,0 +1,145 @@
+/* src/features/market/components/MarketControls.scss */
+.market-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 24px;
+
+  &__tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 32%;
+    min-width: 160px;
+    background: rgba(164, 178, 209, 0.35);
+    border-radius: 999px;
+    padding: 3px;
+  }
+
+  &__tab {
+    height: 24px;
+    border-radius: 999px;
+    border: 0;
+    background: transparent;
+    color: #d6deef;
+    font-size: var(--fs-10);
+    font-weight: var(--fw-300);
+    cursor: pointer;
+
+    &.is-active {
+      background: rgba(255, 255, 255, 0.22);
+      color: #fff;
+    }
+  }
+
+  &__dropdown {
+    position: relative;
+    margin-left: auto;
+    // width: 210px;
+    max-width: 50%;
+  }
+
+  &__dropdownBtn {
+    width: 100%;
+    min-height: 32px;
+    border-radius: 12px;
+    border: 1px solid rgba(175, 186, 217, 0.6);
+    background: rgba(102, 116, 150, 0.5);
+    color: #e7eeff;
+    padding: 4px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: var(--fs-10);
+    font-weight: var(--fw-300);
+    text-align: start;
+  }
+
+  &__chevron {
+    transition: transform 0.2s ease;
+    &.is-open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__dropdownMenu {
+    position: absolute;
+    z-index: 30;
+    left: 0;
+    right: 0;
+    top: calc(100% + 6px);
+    margin: 0;
+    padding: 6px;
+    list-style: none;
+    border-radius: 12px;
+    border: 1px solid rgba(175, 186, 217, 0.7);
+    background: #2a2f5d;
+    backdrop-filter: blur(4px);
+  }
+
+  &__dropdownItem {
+    width: 100%;
+    text-align: left;
+    height: 34px;
+    border: 0;
+    background: transparent;
+    color: #e8eeff;
+    border-radius: 8px;
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: var(--fs-10);
+
+    &:hover,
+    &.is-active {
+      background: rgba(255, 255, 255, 0.12);
+    }
+  }
+  &__fromTo {
+    width: 12px;
+    height: 32px;
+    padding: 0;
+    background: transparent;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    flex: 0 0 auto;
+    border: none;
+    outline: none;
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+  &__fromToIcon {
+    display: block;
+    line-height: 1;
+    img {
+      width: 16px;
+      transition: transform 0.2s ease;
+      transform: rotate(0deg); // asc
+    }
+  }
+
+  &__fromToIcon.is-desc {
+    img {
+      transform: rotate(180deg); // desc
+    }
+  }
+  @media (min-width: 420px) {
+    gap: 8px;
+
+    &__tabs {
+      min-width: 142px;
+      width: 44%;
+    }
+
+    &__dropdown {
+      width: 170px;
+    }
+
+    &__dropdownBtn {
+      font-size: var(--fs-14);
+      height: 36px;
+    }
+  }
+}

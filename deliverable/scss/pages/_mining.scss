@@ -1,0 +1,17 @@
+.mining-page {
+  margin-top: 24px;
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__actions {
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+}

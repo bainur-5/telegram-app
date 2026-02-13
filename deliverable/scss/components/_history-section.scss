@@ -1,0 +1,39 @@
+.ps-history {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ps-history__link {
+  width: 100%;
+  min-height: 32px;
+  padding: 0 14px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  background: linear-gradient(
+    180deg,
+    rgba(147, 169, 213, 0.2) 0%,
+    rgba(86, 106, 152, 0.16) 100%
+  );
+  color: var(--ps-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  &:hover {
+    border-color: rgba(180, 200, 255, 0.6);
+  }
+}
+
+.ps-history__text {
+  font-size: var(--fs-12);
+  font-weight: var(--fw-300);
+}
+
+.ps-history__arrow {
+  font-size: var(--fs-16);
+  opacity: 0.85;
+}

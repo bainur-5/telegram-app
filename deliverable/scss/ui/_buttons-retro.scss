@@ -1,0 +1,102 @@
+.retro-gold-btn {
+  --rgb-w: 420px;
+  --rgb-h: 108px;
+  --rgb-radius: 14px;
+  --rgb-font-size: var(--fs-32);
+
+  --rgb-background: #f1dc57;
+  --rgb-border: #f2e95d;
+  --rgb-inner-border: #f8cc48;
+  --rgb-top: #f3ee63;
+  --rgb-bottom: #edb43b;
+  --rgb-dot: rgba(255, 245, 175, 0.95);
+
+  --rgb-text: #fff;
+  --rgb-text-stroke: #5d392a;
+
+  position: relative;
+  isolation: isolate;
+  width: var(--rgb-w);
+  height: var(--rgb-h);
+  padding: 0 18px;
+  border: 0;
+  border-radius: var(--rgb-radius);
+  background: transparent;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &__border,
+  &__surface,
+  &__dots {
+    position: absolute;
+    pointer-events: none;
+  }
+
+  // Внешняя рамка
+  &__border {
+    inset: 0;
+    border-radius: inherit;
+    background: var(--rgb-border);
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 255, 255, 0.35),
+      0 2px 0 rgba(105, 74, 0, 0.25);
+    z-index: 0;
+  }
+
+  // Основная заливка + внутренняя рамка
+  &__surface {
+    inset: 3px;
+    border-radius: 2px;
+    background: linear-gradient(
+      180deg,
+      var(--rgb-top) 0%,
+      var(--rgb-background) 38%,
+      var(--rgb-bottom) 100%
+    );
+    box-shadow:
+      inset 0 0 0 1px var(--rgb-inner-border),
+      inset 0 1px 0 rgba(255, 255, 255, 0.55);
+    z-index: 1;
+  }
+
+  // Точечный паттерн
+  &__dots {
+    inset: 3px;
+    border-radius: calc(var(--rgb-radius) - 8px);
+    background-image: radial-gradient(circle, var(--rgb-dot) 1.2px, transparent 1.3px);
+    background-size: 6px 6px;
+    opacity: 0.25;
+    z-index: 2;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 3;
+    color: var(--rgb-text);
+    font-size: var(--rgb-font-size);
+    font-weight: var(--fw-300);
+    line-height: 1;
+    letter-spacing: 0.02em;
+
+    // Обводка текста
+    text-shadow:
+      1px 0 var(--rgb-text-stroke),
+      -1px 0 var(--rgb-text-stroke),
+      0 1px var(--rgb-text-stroke),
+      0 -1px var(--rgb-text-stroke),
+      1px 1px var(--rgb-text-stroke),
+      -1px 1px var(--rgb-text-stroke),
+      1px -1px var(--rgb-text-stroke),
+      -1px -1px var(--rgb-text-stroke);
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+}
