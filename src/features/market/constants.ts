@@ -2,10 +2,8 @@
 import type { MarketItem, SortOption } from './types';
 
 export const SORT_OPTIONS: SortOption[] = [
-  { key: 'priceAsc', label: 'Цена (дёшево)' },
-  { key: 'priceDesc', label: 'Цена (дорого)' },
-  { key: 'amountAsc', label: 'Кол-во (меньше)' },
-  { key: 'amountDesc', label: 'Кол-во (больше)' },
+  { key: 'price', label: 'Цена' },
+  { key: 'amount', label: 'Кол-во' },
 ];
 
 export const MOCK_ITEMS: MarketItem[] = [

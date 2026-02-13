@@ -1,6 +1,6 @@
 // src/features/market/MarketPage.tsx
 import { useMemo, useState } from 'react';
-import type { MarketTab, SortKey } from './types';
+import type { MarketTab, SortField,  SortOrder } from './types';
 import { MOCK_ITEMS } from './constants';
 import { sortItems } from './utils/sortItems';
 
@@ -14,13 +14,14 @@ import CreateOrderModal from './components/CreateOrderModal';
 
 export default function MarketPage() {
   const [tab, setTab] = useState<MarketTab>('all');
-  const [sortKey, setSortKey] = useState<SortKey>('priceAsc');
+  const [sortField, setSortField] = useState<SortField>('price');
+  const [sortOrder, setSortOrder] = useState<SortOrder>('asc');
   const [isCreateOpen, setCreateOpen] = useState<boolean>(false);
 
   const visibleItems = useMemo(() => {
     const base = tab === 'all' ? MOCK_ITEMS : MOCK_ITEMS.slice(0, 3);
-    return sortItems(base, sortKey);
-  }, [tab, sortKey]);
+    return sortItems(base, sortField, sortOrder);
+  }, [tab, sortField, sortOrder]);
 
   return (
     <main className="market-page">
@@ -28,9 +29,13 @@ export default function MarketPage() {
 
       <MarketControls
         tab={tab}
-        sortKey={sortKey}
+        sortField={sortField}
+        sortOrder={sortOrder}
         onTabChange={setTab}
-        onSortChange={setSortKey}
+        onSortFieldChange={setSortField}
+        onSortOrderToggle={() =>
+          setSortOrder((prev) => (prev === 'asc' ? 'desc' : 'asc'))
+        }
       />
 
       <div className="market-page__createWrap">

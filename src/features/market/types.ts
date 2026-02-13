@@ -1,5 +1,6 @@
 // src/features/market/types.ts
-export type SortKey = 'priceAsc' | 'priceDesc' | 'amountAsc' | 'amountDesc';
+export type SortField = 'price' | 'amount';
+export type SortOrder = 'asc' | 'desc';
 export type MarketTab = 'all' | 'mine';
 
 export type MarketItem = {
@@ -12,6 +13,6 @@ export type MarketItem = {
 };
 
 export type SortOption = {
-  key: SortKey;
+  key: SortField;
   label: string;
 };

@@ -1,21 +1,26 @@
 // src/features/market/components/MarketControls.tsx
 import { useEffect, useMemo, useRef, useState } from 'react';
-import type { MarketTab, SortKey } from '../types';
+import type { MarketTab, SortField, SortOrder } from '../types';
 import { SORT_OPTIONS } from '../constants';
+import arrowTop from '../../../assets/oi_caret-top.svg'
 import './MarketControls.scss';
 
 interface MarketControlsProps {
   tab: MarketTab;
-  sortKey: SortKey;
+  sortField: SortField;
+  sortOrder: SortOrder;
   onTabChange: (tab: MarketTab) => void;
-  onSortChange: (key: SortKey) => void;
+  onSortFieldChange: (field: SortField) => void;
+  onSortOrderToggle: () => void;
 }
 
 export default function MarketControls({
   tab,
-  sortKey,
+  sortField,
+  sortOrder,
   onTabChange,
-  onSortChange,
+  onSortFieldChange,
+  onSortOrderToggle,
 }: MarketControlsProps) {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
@@ -31,9 +36,18 @@ export default function MarketControls({
   }, []);
 
   const selectedLabel = useMemo(
-    () => SORT_OPTIONS.find((o) => o.key === sortKey)?.label ?? 'Цена',
-    [sortKey]
+    () => SORT_OPTIONS.find((o) => o.key === sortField)?.label ?? 'Сортировка',
+    [sortField]
   );
+
+  const fromToAriaLabel =
+    sortField === 'price'
+      ? sortOrder === 'asc'
+        ? 'Показывать сначала дешёвые'
+        : 'Показывать сначала дорогие'
+      : sortOrder === 'asc'
+      ? 'Показывать сначала меньшее количество'
+      : 'Показывать сначала большее количество';
 
   return (
     <div className="market-controls">
@@ -77,10 +91,10 @@ export default function MarketControls({
                 <button
                   type="button"
                   role="option"
-                  aria-selected={sortKey === opt.key}
-                  className={`market-controls__dropdownItem ${sortKey === opt.key ? 'is-active' : ''}`}
+                  aria-selected={sortField === opt.key}
+                  className={`market-controls__dropdownItem ${sortField === opt.key ? 'is-active' : ''}`}
                   onClick={() => {
-                    onSortChange(opt.key);
+                    onSortFieldChange(opt.key);
                     setOpen(false);
                   }}
                 >
@@ -91,6 +105,22 @@ export default function MarketControls({
           </ul>
         )}
       </div>
+
+      {/* Только кнопка-иконка без текста */}
+      <button
+        type="button"
+        className="market-controls__fromTo"
+        onClick={onSortOrderToggle}
+        aria-label={fromToAriaLabel}
+        title={fromToAriaLabel}
+      >
+        <span
+          className={`market-controls__fromToIcon ${sortOrder === 'desc' ? 'is-desc' : ''}`}
+          aria-hidden="true"
+        >
+          <img src={arrowTop} alt="top" />
+        </span>
+      </button>
     </div>
   );
 }
