@@ -1,0 +1,58 @@
+.dotsBlock {
+  --size: 184px;
+  --dot-size: 1.5px;
+  --dot-gap: 18px;
+  --dot-opacity: 0.25;
+
+  position: fixed;
+  width: var(--size);
+  height: var(--size);
+  pointer-events: none;
+
+  background-image: radial-gradient(
+    circle,
+    #322F55 var(--dot-size),
+    transparent calc(var(--dot-size) + 0.1px)
+  );
+  background-size: var(--dot-gap) var(--dot-gap);
+  opacity: var(--dot-opacity);
+
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  z-index: -1;
+  &--top {
+    top: 0;
+    left: 0;
+
+    // прозрачность в правом нижнем углу
+    -webkit-mask-image: radial-gradient(
+      180px 180px at 100% 100%,
+      transparent 0 34%,
+      #000 72%
+    );
+    mask-image: radial-gradient(
+      180px 180px at 100% 100%,
+      transparent 0 34%,
+      #000 72%
+    );
+  }
+
+  &--bottom {
+    right: 0;
+    bottom: 0;
+
+    // прозрачность в левом верхнем углу
+    -webkit-mask-image: radial-gradient(
+      180px 180px at 0 0,
+      transparent 0 34%,
+      #000 72%
+    );
+    mask-image: radial-gradient(
+      180px 180px at 0 0,
+      transparent 0 34%,
+      #000 72%
+    );
+  }
+}

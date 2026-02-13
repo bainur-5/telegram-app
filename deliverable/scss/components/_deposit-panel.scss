@@ -1,0 +1,129 @@
+.deposit-panel {
+  --border: #5e63c9;
+  --card-title: #45498d;
+  --yellow: #e8f55a;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__card {
+    .uic-card__content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      // padding: 14px;
+      padding-bottom: 14px;
+    }
+  }
+
+  &__title {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--fs-12);
+    font-weight: var(--fw-300);
+    color: #f8faff;
+    background-color: var(--card-title);
+    padding-inline: 14px;
+    padding: 14px;
+    img {
+      width: 18px;
+      height: 18px;
+      display: block;
+    }
+  }
+
+  &__sectionTitle {
+    margin: 0;
+    font-size: var(--fs-12);
+    line-height: 1.2;
+    color: #fff;
+    font-weight: var(--fw-300);
+    padding-inline: 14px;
+    padding: 14px;
+    background-color: var(--card-title);
+  }
+
+  &__input {
+    height: 32px;
+    border-radius: 6px;
+    border: 1px solid rgba(252, 223, 247, 0.45);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-size: var(--fs-12);
+    font-weight: var(--fw-300);
+    padding: 0 8px;
+    outline: none;
+    margin-inline: 14px;
+
+    &::placeholder {
+      color: rgba(255, 224, 250, 0.5);
+    }
+
+    &--small {
+      height: 32px;
+      font-size: var(--fs-12);
+      font-weight: var(--fw-300);
+    }
+  }
+
+  &__quick {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    padding-inline: 14px;
+  }
+
+  &__chip {
+    height: 24px;
+    border-radius: 6px;
+    border: 1px solid rgba(252, 223, 247, 0.38);
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    font-size: var(--fs-10);
+    font-weight: var(--fw-300);
+    cursor: pointer;
+  }
+
+  &__methodBtn {
+    width: calc(100% - (14px*2));
+    // height: 36px;
+    margin: 0 auto;
+    color: #fff;
+    cursor: pointer;
+
+  }
+
+  &__rowHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: rgba(255, 245, 255, 0.88);
+    font-size: var(--fs-12);
+    padding: 0 14px;
+
+    button {
+      border: 0;
+      background: transparent;
+      color: #fff;
+      font-size: var(--fs-12);
+      font-weight: var(--fw-300);
+      cursor: pointer;
+    }
+  }
+
+  &__code {
+    border-radius: 10px;
+    background: #fff;
+    color: #121212;
+    font-family:
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    padding: 8px 10px;
+    font-size: var(--fs-12);
+    line-height: 1.35;
+    word-break: break-all;
+    margin: 0 14px;
+  }
+}

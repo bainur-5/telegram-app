@@ -1,0 +1,29 @@
+/* src/features/market/components/MarketHeader.scss */
+.market-header {
+  margin: 8px 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  &__title {
+    margin: 0;
+    font-size: var(--fs-16);
+    line-height: 1.1;
+    font-weight: var(--fw-300);
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  &__refresh {
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    border: 1px solid #9da7c7;
+    background: rgba(255, 255, 255, 0.12);
+    color: #d9e1ff;
+    cursor: pointer;
+    font-size: var(--fs-18);
+    line-height: 1;
+  }
+}

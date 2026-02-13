@@ -1,0 +1,17 @@
+.finances-page {
+
+  width: 100%;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__title {
+    margin: 6px 0 2px;
+    text-align: center;
+    font-size: var(--fs-16);
+    line-height: 1.1;
+    font-weight: var(--fw-300);
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+  }
+}
