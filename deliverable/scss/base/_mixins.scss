@@ -1,0 +1,8 @@
+@mixin page-shell {
+  width: 100%;
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: 12px;
+  overflow-x: hidden;
+  position: relative;
+}
