@@ -1,0 +1,1 @@
+document.querySelectorAll('[data-lang]').forEach((btn)=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-lang]').forEach((b)=>b.classList.remove('is-active'));btn.classList.add('is-active');}));

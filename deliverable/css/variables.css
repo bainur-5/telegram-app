@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Nunito';
+  src: url('../assets/fonts/Nunito-Light.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('../assets/fonts/Nunito-Black.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --bg: #171531;
+  --text: #e5e7eb;
+  --card: #111827;
+  --border: #7162be;
+  --violet: #a542f9;
+  --yellow: #f0f95d;
+  --green: #7ebf3e;
+  --green-light: #b6fd7d;
+  --blue: #427ff9;
+  --blue-light: #6dbafb;
+  --card-title: #393b71;
+  --card-back: #1d1f45;
+  --radius: 14px;
+  --font-main: 'Nunito', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --fs-10: 10px;--fs-12: 12px;--fs-14: 14px;--fs-16: 16px;--fs-17-5: 17.5px;--fs-18: 18px;--fs-20: 20px;--fs-32: 32px;
+  --fw-300: 300;--fw-400: 400;--fw-500: 500;--fw-600: 600;--fw-700: 700;--fw-800: 800;
+}
+body{margin:0;font-family:var(--font-main);background:var(--bg);color:var(--text)}
+.app{width:100%;min-height:100dvh;margin:0 auto;padding:12px 12px;overflow-x:hidden;position:relative;max-width:390px}
+p{font-weight:var(--fw-300)}
+.yellow{color:var(--yellow)}.blue{color:var(--blue)}.green{color:var(--green)}.violet{color:var(--violet)}.white{color:var(--text)}
