@@ -3,7 +3,7 @@
     btn.addEventListener('click', () => {
       const href = btn.getAttribute('data-nav');
       if (!href) return;
-      const base = window.location.pathname.includes('/pages/') ? '../' : '';
+      const base = window.location.pathname.includes('/page/') ? '../' : '';
       window.location.href = `${base}${href}`;
     });
   });
